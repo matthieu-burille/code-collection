@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Address Autocomplete</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./addressForm.css"/>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="./AddressAutocompleteConnector.js"></script>
+<script type="text/javascript">
+    
+    var addressConnector;
+    $( document ).ready(function() {
+        addressConnector = new AddressAutocompleteConnector();
+        addressConnector.initialize();
+    });
+
+</script>
+<body>
+    <section>
+        <h1>Address autocomplete using the BAN API and jQuery UI</h1>
+    </section>
+
+    <section class="addressGroup">
+        <div class="addressLabel">
+           <label for="address">Address</label>
+        </div>
+        <div class="addressInput">
+           <input id="address" type="text" placeholder="Enter an address"/>
+        </div>
+
+        <div class="addressLabel">
+           <label for="zipCode">ZIP Code</label>
+        </div>
+        <div class="addressInput">
+           <input id="zipCode" type="text"/>
+        </div>
+
+        <div class="addressLabel">
+           <label for="city">City</label>
+        </div>
+        <div class="addressInput">
+           <input id="city" type="text"/>
+        </div>
+
+        <div class="addressLabel">
+           <label for="country">Country</label>
+        </div>
+        <div class="addressInput">
+           <select id="country">
+              <option label=" "></option>
+              <option value="france">France</option>
+              <option value="other">Other country</option>
+           </select>
+        </div>
+     </section>     
+</body>
+</html>

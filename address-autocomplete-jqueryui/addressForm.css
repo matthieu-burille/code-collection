@@ -1,0 +1,29 @@
+section {
+    width: 50%;
+    margin-left: 7%;
+    text-align: center;
+}
+
+.addressGroup {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-auto-rows: 1fr;
+    row-gap: 10%;
+}
+
+.addressGroup div {
+    display: flex;
+}
+
+.addressLabel label {
+    width: 100%;
+}
+
+.addressInput input, #country-button {
+    width: 100% !important;
+    font-size: small;
+}
+
+#country-button {
+    background-color: white;
+}
